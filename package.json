@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Blazemorales/ProjP#readme",
   "dependencies": {
     "@types/react": "^19.2.2",
+    "lucide": "^0.545.0",
     "lucide-react": "^0.545.0",
     "react": "^19.2.0"
   }
