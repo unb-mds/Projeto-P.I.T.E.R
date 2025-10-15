@@ -30,7 +30,36 @@
 ├── .env.example # Variáveis de ambiente de exemplo
 └── README.md # Documentação do backend
 
+## 🧪 Testes Automatizados
 
+Este backend utiliza **pytest** para testes automatizados de endpoints.
+
+### ▶️ Como rodar os testes
+
+Ative o ambiente virtual:
+```bash
+venv\Scripts\activate
+Execute todos os testes:
+
+bash
+Copiar código
+pytest -v
+🧠 Testes implementados
+/health → Verifica se o servidor está online e respondendo corretamente.
+
+Resultado esperado:
+
+arduino
+Copiar código
+tests/test_health.py::test_health_endpoint PASSED
+sql
+Copiar código
+
+Depois, no terminal:
+```bash
+git add README.md
+git commit -m "docs: adicionar instruções de teste automatizado ao README"
+git push origin adaptar_arquitetura
 ---
 
 ## ⚙️ Configuração do Ambiente
