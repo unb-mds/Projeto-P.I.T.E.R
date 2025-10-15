@@ -3,10 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.settings import settings
 from app.core.logging import logger
 
-# 👉 Ajuste os imports para apontarem para dentro do pacote `app/`
-#    (mova suas pastas para app/services/... conforme a nova estrutura)
-from app.services.integration.piter_api_orchestrator import PiterApiOrchestrator
-from app.services.api.clients.querido_diario_client import FilterParams
+# imports alinhados com a sua estrutura:
+# app/
+#   integration/ piter_api_orchestrator.py
+#   integration/api/clients/querido_diario_client.py
+from app.integration.piter_api_orchestrator import PiterApiOrchestrator
+from app.integration.api.clients.querido_diario_client import FilterParams
 
 import time
 
@@ -16,7 +18,7 @@ app = FastAPI(
     version=settings.APP_VERSION,
 )
 
-# CORS (lido a partir de .env via settings)
+# CORS (via .env)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[o.strip() for o in settings.CORS_ORIGINS.split(",") if o.strip()],
@@ -38,7 +40,6 @@ async def read_root():
         "version": settings.APP_VERSION,
     }
 
-# Health padronizado (com uptime)
 @app.get("/health", tags=["infra"])
 async def health_check():
     return {"status": "ok", "uptime_s": round(time.time() - _START, 2)}
