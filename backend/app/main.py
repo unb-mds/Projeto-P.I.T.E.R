@@ -2,6 +2,8 @@ from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.settings import settings
 from app.core.logging import logger
+from pydantic import BaseModel, Field
+from typing import Optional, Dict, Any
 
 # imports alinhados com a sua estrutura:
 # app/
