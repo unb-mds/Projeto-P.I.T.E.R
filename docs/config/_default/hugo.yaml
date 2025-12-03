@@ -7,3 +7,28 @@ disableKinds: ["taxonomy", "term"]
 enableRobotsTXT: true
 canonifyURLs: false
 relativeURLs: true
+
+# Menu de navegação
+menu:
+  main:
+    - name: "Visao Geral"
+      url: "/overview/"
+      weight: 1
+    - name: "Integrantes"
+      url: "/integrantes/"
+      weight: 2
+    - name: "XP"
+      url: "/xp/"
+      weight: 3
+    - name: "Interface"
+      url: "/interface/"
+      weight: 4
+    - name: "MVP"
+      url: "/mvp/"
+      weight: 5
+    - name: "Arquitetura"
+      url: "/arquitetura/"
+      weight: 6
+    - name: "Sprints"
+      url: "/sprint/"
+      weight: 7
