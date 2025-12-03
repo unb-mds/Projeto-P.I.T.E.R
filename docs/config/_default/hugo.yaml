@@ -5,8 +5,8 @@ title: "P.I.T.E.R - Buscadora de Investimentos em Inteligência Artificial"
 # Configurações básicas
 disableKinds: ["taxonomy", "term"]
 enableRobotsTXT: true
-canonifyURLs: false
-relativeURLs: true
+canonifyURLs: true
+relativeURLs: false
 
 # Menu de navegação
 menu:
